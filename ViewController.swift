@@ -64,6 +64,14 @@ class ViewController: UIViewController {
         totalLabel.text = String(format: "$%.2f", total)
     }
     
+    
+    @IBOutlet weak var Feedback: UITextField!
+    
+    @IBAction func textField(_ sender: Any) {
+        let text = Feedback.text
+        Feedback.text = text ?? ""
+        }
+    
     @IBAction func Reset(_ sender: Any) {
         // Resets the calculator after entering the credentials
         
@@ -74,7 +82,9 @@ class ViewController: UIViewController {
         billAmount.text = String(format: "$%.0f", bill)
         tipLabel.text = String(format: "$%.0f", tip)
         totalLabel.text = String(format: "$%.0f", total)
+        Feedback.text = String(format: "", Feedback)
     }
     
 }
+
 
